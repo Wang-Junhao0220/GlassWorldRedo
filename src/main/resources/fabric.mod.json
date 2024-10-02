@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "glassworld",
+	"version": "${version}",
+	"name": "GlassWorld",
+	"description": "Junhax's GlassWorld Mod, add some glass",
+	"authors": [
+		"Junhax Wang"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "GPL-3",
+	"icon": "assets/glassworld/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.junhax.glassworld.GlassWorld"
+		],
+		"client": [
+			"com.junhax.glassworld.GlassWorldClient"
+		],
+		"fabric-datagen": [
+			"com.junhax.glassworld.GlassWorldDataGenerator"
+		]
+	},
+	"mixins": [
+		"glassworld.mixins.json",
+		{
+			"config": "glassworld.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.5",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
